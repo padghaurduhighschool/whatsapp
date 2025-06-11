@@ -10,6 +10,8 @@
             margin: 20px;
             background-color: #f4f4f4;
             color: #333;
+            position: relative; /* Needed for watermark absolute positioning */
+            min-height: 95vh; /* Ensure body is tall enough for watermark to be visible */
         }
         .container {
             max-width: 800px;
@@ -18,6 +20,8 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative; /* Ensure content is above watermark */
+            z-index: 1; /* Make sure container content is above the watermark */
         }
         h1 {
             color: #0056b3;
@@ -76,12 +80,42 @@
         .copied-feedback {
             background-color: #6c757d; /* Grey when copied */
         }
+
+        /* Watermark Styles */
+        .watermark {
+            position: absolute; /* Position relative to the nearest positioned ancestor (body in this case) */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://raw.githubusercontent.com/padghaurduhighschool/whatsapp/refs/heads/main/logo.png'); /* School logo URL */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 300px; /* Adjust size as needed, or 'contain' / 'cover' */
+            opacity: 0.1; /* Adjust opacity for watermark effect */
+            pointer-events: none; /* Allows clicks/interactions with elements beneath it */
+            z-index: 0; /* Place behind other content */
+        }
+
+        /* Responsive adjustments for watermark */
+        @media (max-width: 768px) {
+            .watermark {
+                background-size: 200px; /* Smaller logo on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .watermark {
+                background-size: 150px; /* Even smaller logo on mobile */
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Watermark div - positioned behind content -->
+    <div class="watermark"></div>
 
     <div class="container">
-        <h1>School WhatsApp Group Links</h1>
+        <h1>Padgha Urdu High School School WhatsApp Group Links 2025-26</h1>
 
         <div class="class-group">
             <span class="class-label">Jr. KG:</span>
