@@ -3,110 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padgha Urdu High School WhatsApp Group Links 2025-26</title>
+    <title>Padgha Urdu High School WhatsApp Group Links & Timetable 2025-26</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+            margin: 0; /* Remove default body margin */
+            padding: 20px;
+            background-color: #f0f2f5; /* Light grey background */
             color: #333;
-            position: relative; /* Needed for watermark absolute positioning */
-            min-height: 95vh; /* Ensure body is tall enough for watermark to be visible */
+            position: relative;
+            min-height: 100vh; /* Ensure body is tall enough for watermark */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center content horizontally */
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
+            max-width: 900px; /* Increased max-width for better timetable display */
+            width: 100%; /* Occupy full width on smaller screens */
+            margin: 20px auto; /* Add margin for spacing */
+            background-color: #ffffff; /* White background for content */
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative; /* Ensure content is above watermark */
-            z-index: 1; /* Make sure container content is above the watermark */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box; /* Include padding in element's total width and height */
         }
         h1 {
-            color: #0056b3;
+            color: #1a73e8; /* Google blue for headings */
             text-align: center;
             margin-bottom: 30px;
+            font-size: 2.2em; /* Larger heading */
+            font-weight: 700;
+        }
+        h2 {
+            color: #3c4043; /* Darker grey for subheadings */
+            text-align: center;
+            margin-top: 40px; /* Space above new section */
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
         }
         .class-group {
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
             align-items: center;
             margin-bottom: 15px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #e9f5ff;
+            border: 1px solid #e0e0e0; /* Lighter border */
+            padding: 12px; /* More padding */
+            border-radius: 8px; /* Slightly more rounded */
+            background-color: #e8f0fe; /* Light blue background */
+            transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+        }
+        .class-group:hover {
+            transform: translateY(-3px); /* Lift effect on hover */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow on hover */
         }
         .class-label {
             font-weight: bold;
-            flex-basis: 150px; /* Adjust width for labels */
-            min-width: 100px;
-            margin-right: 15px;
+            flex-basis: 120px; /* Adjust width for labels */
+            min-width: 90px;
+            margin-right: 20px;
             color: #007bff;
+            font-size: 1.1em;
         }
         .link-text {
             flex-grow: 1;
             padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #fff;
-            overflow-wrap: break-word; /* Ensures long links wrap */
-            word-break: break-all; /* Breaks words if necessary */
+            border: 1px solid #dcdcdc; /* Subtle border */
+            border-radius: 6px;
+            background-color: #fdfdfd; /* Off-white for link background */
+            overflow-wrap: break-word;
+            word-break: break-all;
+            font-size: 0.95em;
         }
-        /* Style for the clickable links */
         .link-text a {
-            color: #007bff; /* Standard link blue */
-            text-decoration: none; /* Remove underline */
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
         .link-text a:hover {
-            text-decoration: underline; /* Underline on hover */
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: underline;
         }
         .copy-button {
-            background-color: #28a745;
+            background-color: #4CAF50; /* Green */
             color: white;
             border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
+            padding: 10px 18px; /* More padding for bigger buttons */
+            border-radius: 6px;
             cursor: pointer;
-            margin-left: 15px;
-            transition: background-color 0.3s ease;
+            margin-left: 20px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Button shadow */
+            font-weight: 600;
         }
         .copy-button:hover {
-            background-color: #218838;
+            background-color: #45a049; /* Darker green on hover */
+            transform: translateY(-1px); /* Slight lift on hover */
         }
         .copy-button:active {
-            background-color: #1e7e34;
+            background-color: #3e8e41; /* Even darker on active */
+            transform: translateY(0); /* Press effect */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
         .copied-feedback {
             background-color: #6c757d; /* Grey when copied */
         }
 
+        /* Timetable specific styles */
+        .timetable-container {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .timetable-iframe {
+            width: 100%;
+            height: 600px; /* Fixed height, consider responsive adjustments below */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
         /* Watermark Styles */
         .watermark {
-            position: absolute; /* Position relative to the nearest positioned ancestor (body in this case) */
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://raw.githubusercontent.com/padghaurduhighschool/whatsapp/refs/heads/main/logo.png'); /* School logo URL */
+            background-image: url('https://raw.githubusercontent.com/padghaurduhighschool/whatsapp/refs/heads/main/logo.png');
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: 300px; /* Adjust size as needed, or 'contain' / 'cover' */
-            opacity: 0.1; /* Adjust opacity for watermark effect */
-            pointer-events: none; /* Allows clicks/interactions with elements beneath it */
-            z-index: 0; /* Place behind other content */
+            background-size: 300px;
+            opacity: 0.07; /* Even lighter opacity for subtle effect */
+            pointer-events: none;
+            z-index: 0;
         }
 
-        /* Responsive adjustments for watermark */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .class-group {
+                flex-direction: column; /* Stack items vertically on small screens */
+                align-items: flex-start; /* Align to start */
+                padding: 10px;
+            }
+            .class-label {
+                margin-bottom: 8px; /* Space between label and link */
+                margin-right: 0;
+            }
+            .link-text {
+                width: 100%; /* Full width for link text */
+                margin-bottom: 10px; /* Space between link and button */
+            }
+            .copy-button {
+                width: 100%; /* Full width for button */
+                margin-left: 0;
+                padding: 8px 15px;
+            }
             .watermark {
-                background-size: 200px; /* Smaller logo on smaller screens */
+                background-size: 200px;
+            }
+            .timetable-iframe {
+                height: 400px; /* Shorter iframe on smaller screens */
             }
         }
         @media (max-width: 480px) {
-            .watermark {
-                background-size: 150px; /* Even smaller logo on mobile */
+            h1 {
+                font-size: 1.5em;
             }
+            h2 {
+                font-size: 1.3em;
+            }
+            .watermark {
+                background-size: 150px;
+            }
+            .timetable-iframe {
+                height: 300px; /* Even shorter iframe on mobile */
+            }
+        }
+
+        /* Message Box for copy errors */
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #d4edda; /* Default success color */
+            color: #155724; /* Default success text color */
+            border: 1px solid #c3e6cb; /* Default success border */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-align: center;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -120,109 +222,138 @@
         <div class="class-group">
             <span class="class-label">Jr. KG:</span>
             <p id="jrKgLink" class="link-text"><a href="https://chat.whatsapp.com/CUovvNKh6jp0DrKp6yG2yz" target="_blank">https://chat.whatsapp.com/CUovvNKh6jp0DrKp6yG2yz</a></p>
+            <button class="copy-button" onclick="copyLink('jrKgLink', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Sr. KG:</span>
             <p id="srKgLink" class="link-text"><a href="https://chat.whatsapp.com/LeFQcDNQ1jZ6ofaHYp6icW" target="_blank">https://chat.whatsapp.com/LeFQcDNQ1jZ6ofaHYp6icW</a></p>
+            <button class="copy-button" onclick="copyLink('srKgLink', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 1:</span>
             <p id="class1Link" class="link-text"><a href="https://chat.whatsapp.com/Jl5GvU7pGEa5MUCQceD4fr" target="_blank">https://chat.whatsapp.com/Jl5GvU7pGEa5MUCQceD4fr</a></p>
+            <button class="copy-button" onclick="copyLink('class1Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 2:</span>
             <p id="class2Link" class="link-text"><a href="https://chat.whatsapp.com/Kr2I45Z5kzcETkpKOz6Co3" target="_blank">https://chat.whatsapp.com/Kr2I45Z5kzcETkpKOz6Co3</a></p>
+            <button class="copy-button" onclick="copyLink('class2Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 3:</span>
             <p id="class3Link" class="link-text"><a href="https://chat.whatsapp.com/INYMJy7KjBPLtOMtF0H1Gu" target="_blank">https://chat.whatsapp.com/INYMJy7KjBPLtOMtF0H1Gu</a></p>
+            <button class="copy-button" onclick="copyLink('class3Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 4:</span>
             <p id="class4Link" class="link-text"><a href="https://chat.whatsapp.com/GiKxEa0wNkPKhdQNfKfAIy" target="_blank">https://chat.whatsapp.com/GiKxEa0wNkPKhdQNfKfAIy</a></p>
+            <button class="copy-button" onclick="copyLink('class4Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 5:</span>
             <p id="class5Link" class="link-text"><a href="https://chat.whatsapp.com/HAf6tdth8CcGTY4yfmC0gF" target="_blank">https://chat.whatsapp.com/HAf6tdth8CcGTY4yfmC0gF</a></p>
+            <button class="copy-button" onclick="copyLink('class5Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 6:</span>
             <p id="class6Link" class="link-text"><a href="https://chat.whatsapp.com/FC7cOBlNY4FEefu598fvLA" target="_blank">https://chat.whatsapp.com/FC7cOBlNY4FEefu598fvLA</a></p>
+            <button class="copy-button" onclick="copyLink('class6Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 7:</span>
             <p id="class7Link" class="link-text"><a href="https://chat.whatsapp.com/IkfAydiDuwP48CuZBgTHWW" target="_blank">https://chat.whatsapp.com/IkfAydiDuwP48CuZBgTHWW</a></p>
+            <button class="copy-button" onclick="copyLink('class7Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 8:</span>
             <p id="class8Link" class="link-text"><a href="https://chat.whatsapp.com/FbxqPkmo3it7pNNo2gSuXe" target="_blank">https://chat.whatsapp.com/FbxqPkmo3it7pNNo2gSuXe</a></p>
+            <button class="copy-button" onclick="copyLink('class8Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 9:</span>
             <p id="class9Link" class="link-text"><a href="https://chat.whatsapp.com/Cu05zIDbZzuInhN3CLJPo7" target="_blank">https://chat.whatsapp.com/Cu05zIDbZzuInhN3CLJPo7</a></p>
+            <button class="copy-button" onclick="copyLink('class9Link', this)">Copy</button>
         </div>
 
         <div class="class-group">
             <span class="class-label">Class 10:</span>
             <p id="class10Link" class="link-text"><a href="https://chat.whatsapp.com/IHCvs1GsJc3975pRJLaj9Q" target="_blank">https://chat.whatsapp.com/IHCvs1GsJc3975pRJLaj9Q</a></p>
+            <button class="copy-button" onclick="copyLink('class10Link', this)">Copy</button>
+        </div>
+
+        <h2>Class Timetable 2025-26</h2>
+        <div class="timetable-container">
+            <!-- IMPORTANT: Replace the src below with your actual Google Sheet embed URL -->
+            <iframe class="timetable-iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSglf9pKL5jf7CJ3qtxca2VnFXj0Rtqyon48bXKgX9pqy4y3yu-gp4CecsCZAAleoOOaJo9VPFX0KCc/pubhtml?gid=1049764348&single=true&widget=true&headers=false" loading="lazy"></iframe>
         </div>
 
     </div>
 
     <script>
         function copyLink(elementId, buttonElement) {
-            // Get the text content of the link within the <p> tag
-            const linkText = document.getElementById(elementId).querySelector('a').href; 
+            const linkText = document.getElementById(elementId).querySelector('a').href;
+            
+            // Function to display a custom message box
+            function showMessageBox(message, type = 'success') {
+                let messageBox = document.querySelector('.message-box');
+                if (!messageBox) {
+                    messageBox = document.createElement('div');
+                    messageBox.classList.add('message-box');
+                    document.body.appendChild(messageBox);
+                }
+
+                messageBox.innerHTML = message;
+                messageBox.style.display = 'block';
+
+                if (type === 'success') {
+                    messageBox.style.backgroundColor = '#d4edda';
+                    messageBox.style.color = '#155724';
+                    messageBox.style.borderColor = '#c3e6cb';
+                } else { /* error */
+                    messageBox.style.backgroundColor = '#f8d7da';
+                    messageBox.style.color = '#721c24';
+                    messageBox.style.borderColor = '#f5c6cb';
+                }
+
+                setTimeout(() => {
+                    messageBox.style.display = 'none';
+                }, 3000); // Hide message after 3 seconds
+            }
 
             // Use the modern Clipboard API
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(linkText).then(() => {
                     const originalButtonText = buttonElement.textContent;
                     buttonElement.textContent = 'Copied!';
-                    buttonElement.classList.add('copied-feedback'); // Add class for styling
+                    buttonElement.classList.add('copied-feedback');
 
                     setTimeout(() => {
                         buttonElement.textContent = originalButtonText;
-                        buttonElement.classList.remove('copied-feedback'); // Remove class
-                    }, 1500); // Change back after 1.5 seconds
+                        buttonElement.classList.remove('copied-feedback');
+                    }, 1500);
+                    showMessageBox('Link copied successfully!', 'success');
                 }).catch(err => {
                     console.error('Failed to copy text: ', err);
-                    // Use a message box instead of alert()
-                    const messageBox = document.createElement('div');
-                    messageBox.style.cssText = `
-                        position: fixed;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: #f8d7da;
-                        color: #721c24;
-                        border: 1px solid #f5c6cb;
-                        padding: 15px;
-                        border-radius: 5px;
-                        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-                        z-index: 1000;
-                        text-align: center;
-                    `;
-                    messageBox.innerHTML = `Failed to copy link. Please copy it manually:<br><strong>${linkText}</strong>`;
-                    document.body.appendChild(messageBox);
-                    setTimeout(() => {
-                        document.body.removeChild(messageBox);
-                    }, 5000); // Remove message after 5 seconds
+                    showMessageBox(`Failed to copy link. Please copy it manually:<br><strong>${linkText}</strong>`, 'error');
                 });
             } else {
-                // Fallback for older browsers (less common now)
+                // Fallback for older browsers
                 const textArea = document.createElement("textarea");
                 textArea.value = linkText;
+                textArea.style.position = 'fixed'; // Prevent scrolling to the bottom
+                textArea.style.top = '0';
+                textArea.style.left = '0';
+                textArea.style.opacity = '0'; // Hide textarea
                 document.body.appendChild(textArea);
                 textArea.focus();
                 textArea.select();
@@ -235,34 +366,15 @@
                         buttonElement.textContent = originalButtonText;
                         buttonElement.classList.remove('copied-feedback');
                     }, 1500);
+                    showMessageBox('Link copied successfully!', 'success');
                 } catch (err) {
                     console.error('Fallback: Oops, unable to copy', err);
-                    // Use a message box instead of alert()
-                    const messageBox = document.createElement('div');
-                    messageBox.style.cssText = `
-                        position: fixed;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: #f8d7da;
-                        color: #721c24;
-                        border: 1px solid #f5c6cb;
-                        padding: 15px;
-                        border-radius: 5px;
-                        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-                        z-index: 1000;
-                        text-align: center;
-                    `;
-                    messageBox.innerHTML = `Failed to copy link. Please copy it manually:<br><strong>${linkText}</strong>`;
-                    document.body.appendChild(messageBox);
-                    setTimeout(() => {
-                        document.body.removeChild(messageBox);
-                    }, 5000); // Remove message after 5 seconds
+                    showMessageBox(`Failed to copy link. Please copy it manually:<br><strong>${linkText}</strong>`, 'error');
+                } finally {
+                    document.body.removeChild(textArea);
                 }
-                document.body.removeChild(textArea);
             }
         }
     </script>
-
 </body>
 </html>
